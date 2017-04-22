@@ -6,6 +6,7 @@ import router from './router'
 import store from './store'
 
 import { event } from '@/utils'
+import { http } from '@/services'
 
 /* eslint-disable no-new */
 new Vue({
@@ -16,5 +17,7 @@ new Vue({
   components: { App },
   created () {
     event.init()
+
+    http.init()
   }
 })

@@ -1,4 +1,4 @@
-export default {
+export const storage = {
   get (key) {
     try {
       return JSON.parse(localStorage.getItem(key))
@@ -27,3 +27,5 @@ export default {
     console.warn('[storage]', message)
   }
 }
+
+export default storage

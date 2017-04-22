@@ -1,13 +1,13 @@
 <template>
-<div class="ui middle aligned center aligned grid">
-  <div class="column">
+<div class="login ui middle aligned center aligned grid">
+  <div class="column column-login">
     <h2 class="ui teal image header">
       <div class="content">
-        Log-in to your account
+        Log-in to Nossa Igreja
       </div>
     </h2>
     <form @submit.prevent="login" class="ui large form">
-      <div class="ui stacked segment">
+      <div class="ui stacked segment" style="padding: 30px">
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
@@ -27,15 +27,15 @@
 
     </form>
 
-    <div class="ui message">
-      New to us? <a href="#">Sign Up</a>
-    </div>
   </div>
 </div>
 </template>
 
 <script>
+  import NProgress from 'nprogress'
+
   import { event } from '@/utils'
+  import { http } from '@/services'
 
   export default {
     name: 'Login',
@@ -48,22 +48,31 @@
     },
 
     methods: {
-      login () {
+      login (email, password) {
         this.failed = false
 
-        this.password = ''
+        NProgress.start()
 
-        event.emit('user:loggedin')
+        http.post('/usuarios/login', { email, password }, () => {
+          this.password = ''
+
+          event.emit('user:loggedin')
+        }, () => {
+          this.password = ''
+        })
       }
     }
   }
 </script>
 
-<style >
+<style scoped>
     body {
       background-color: #DADADA;
     }
-    .column {
+    .login {
+      margin-top: 100px;
+    }
+    .column-login {
       max-width: 450px;
     }
 </style>
