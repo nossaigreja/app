@@ -5,11 +5,16 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import { event } from '@/utils'
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  created () {
+    event.init()
+  }
 })
