@@ -11,7 +11,7 @@
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input v-model="email" type="text" name="email" placeholder="E-mail address">
+            <input v-model="username" type="text" name="username" placeholder="Username">
           </div>
         </div>
         <div class="field">
@@ -41,19 +41,19 @@
     name: 'Login',
     data () {
       return {
-        email: '',
+        username: '',
         password: '',
         failed: false
       }
     },
 
     methods: {
-      login (email, password) {
+      login (username, password) {
         this.failed = false
 
         NProgress.start()
 
-        http.post('/usuarios/login', { email, password }, () => {
+        http.post('/usuarios/login', { username, password }, () => {
           this.password = ''
 
           event.emit('user:loggedin')

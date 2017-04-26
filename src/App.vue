@@ -15,7 +15,7 @@
   import storage from '@/services/storage'
   import { event } from '@/utils'
 
-  import Login from 'components/authentication/login.vue'
+  import Login from 'components/authentication/Login.vue'
 
   export default {
     name: 'app',
