@@ -2,6 +2,11 @@
 
 > App Nossa Igreja
 
+### Procedimentos ###
+
+* **$ git clone https://github.com/nossaigreja/app.git app** (Clone o repositório)
+* **$ cd app**
+
 ## Build Setup
 
 ``` bash
