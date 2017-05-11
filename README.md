@@ -5,7 +5,7 @@
 ### Clone project
 
 ```bash
-# clonne app
+# clone app
 $ git clone https://github.com/nossaigreja/app.git
 
 # open project
