@@ -2,8 +2,9 @@
 <div class="login ui middle aligned center aligned grid">
   <div class="column column-login">
     <h2 class="ui teal image header">
+      <img src="~assets/images/logo-c1.png" class="image">
       <div class="content">
-        Log-in to Nossa Igreja
+        Nossa Igreja
       </div>
     </h2>
     <form @submit.prevent="login" class="ui large form">
@@ -20,10 +21,14 @@
             <input v-model="password" type="password" name="password" placeholder="Password">
           </div>
         </div>
-        <button type="submit" class="ui fluid large teal submit button">Login</button type="submit">
+        <button type="submit" class="ui fluid large teal submit button">Acessar</button type="submit">
       </div>
 
       <div class="ui error message"></div>
+
+      <div class="ui message">
+        Ainda não é cadastrado? <a href="#/cadastro">Cadastre-se</a>
+      </div>
 
     </form>
 
@@ -74,5 +79,12 @@
     }
     .column-login {
       max-width: 450px;
+    }
+
+    .header .content {
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.63);
+      font-weight: bold;
+      font-size: 40px;
     }
 </style>
