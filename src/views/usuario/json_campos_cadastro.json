@@ -1,0 +1,30 @@
+[
+  {
+    "imagem": "string",
+    "nome": "string",
+    "dtNascimento": "2017-04-23T22:42:10.024Z",
+    "sexo": "string",
+    "dtCriacao": "2017-04-23T22:42:10.024Z",
+    "dtAlteracao": "2017-04-23T22:42:10.024Z",
+    "dtRemocao": "2017-04-23T22:42:10.025Z",
+    "pai": "string",
+    "mae": "string",
+    "rg": "string",
+    "rgOrgao": "string",
+    "dtCasamento": "2017-04-23T22:42:10.025Z",
+    "observacao": "string",
+    "pne": false,
+    "cpf": "string",
+    "realm": "string",
+    "username": "string",
+    "email": "string",
+    "emailVerified": true,
+    "id": 0,
+    "conjugeId": 0,
+    "filialId": 0,
+    "naturalidadeId": 0,
+    "estadoCivilId": 0,
+    "profissaoId": 0,
+    "escolaridadeId": 0
+  }
+]
