@@ -17,7 +17,6 @@ new Vue({
   components: { App },
   created () {
     event.init()
-
     http.init()
   }
 })

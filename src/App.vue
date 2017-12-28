@@ -1,7 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <div id="main" v-if="authenticated">
-      <img src="./assets/logo.png">
       <h1>Authenticated</h1>
       <router-view></router-view>
     </div>
@@ -15,7 +14,7 @@
   import storage from '@/services/storage'
   import { event } from '@/utils'
 
-  import Login from 'components/authentication/login.vue'
+  import Login from 'components/authentication/Login.vue'
 
   export default {
     name: 'app',
@@ -44,4 +43,19 @@
 <style>
   @import '~semantic-ui-css/semantic.css';
   @import '~nprogress/nprogress.css';
+
+  .app {
+    height: 100%;
+  }
+
+  .login-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      background-image: url(~assets/images/pastor.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
 </style>
