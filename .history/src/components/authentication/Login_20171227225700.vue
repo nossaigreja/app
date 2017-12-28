@@ -58,7 +58,6 @@
         username: '',
         password: '',
         failed: false,
-        //https://github.com/phanan/vue-google-signin-button
         googleSignInParams: {
           client_id: 'YOUR_APP_CLIENT_ID.apps.googleusercontent.com'
         }
