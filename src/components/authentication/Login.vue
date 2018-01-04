@@ -29,7 +29,14 @@
       <div class="ui message">
         Ainda não é cadastrado? <a href="#/cadastro">Cadastre-se</a>
       </div>
-
+      <div class="ui message">
+        <g-signin-button
+          :params="googleSignInParams"
+          @success="onSignInSuccess"
+          @error="onSignInError">
+          Sign in with Google
+        </g-signin-button>
+      </div>
     </form>
 
   </div>
@@ -48,11 +55,19 @@
       return {
         username: '',
         password: '',
-        failed: false
+        failed: false,
+        //https://github.com/phanan/vue-google-signin-button
+        googleSignInParams: {
+          client_id: 'YOUR_APP_CLIENT_ID.apps.googleusercontent.com'
+        }
       }
     },
-
     methods: {
+      onSignInSuccess (googleUser) {
+      },
+      onSignInError (error) {
+        console.log('OH NOES', error)
+      },
       login (username, password) {
         this.failed = false
 
@@ -86,5 +101,15 @@
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.63);
       font-weight: bold;
       font-size: 40px;
+    }
+
+    .g-signin-button {
+      /* This is where you control how the button looks. Be creative! */
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 3px;
+      background-color: #3c82f7;
+      color: #fff;
+      box-shadow: 0 3px 0 #0f69ff;
     }
 </style>

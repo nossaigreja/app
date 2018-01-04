@@ -19,6 +19,7 @@
     "nprogress": "^0.2.0",
     "semantic-ui-css": "^2.2.10",
     "vue": "^2.1.10",
+    "vue-google-signin-button": "^1.0.2",
     "vue-router": "^2.2.0",
     "vuex": "^2.2.1"
   },
