@@ -29,7 +29,6 @@
       <div class="ui message">
         Ainda não é cadastrado? <a href="#/cadastro">Cadastre-se</a>
       </div>
-
       <div class="ui message">
         <g-signin-button
           :params="googleSignInParams"
@@ -38,7 +37,6 @@
           Sign in with Google
         </g-signin-button>
       </div>
-
     </form>
 
   </div>
